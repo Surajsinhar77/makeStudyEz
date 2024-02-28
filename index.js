@@ -2,6 +2,8 @@ const express = require('express');
 const port = 8000;
 const app = express();
 const { model } = require('./ProgrammingLogin/Aimodel.js');
+require('dotenv').config();
+
 app.use(express.json());
 
 app.get('/', async (req, res) => {
@@ -17,4 +19,4 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.listen(port, () => console.log("Server listening on http://localhost:", port));
+app.listen(port, () => console.log("Server listening on http://localhost:", port)); 
