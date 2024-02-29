@@ -1,11 +1,18 @@
+
+require('dotenv').config(); // this should we on the top otherwise other file can't able to access it 
 const express = require('express');
 const port = 8000;
 const app = express();
 const { model } = require('./ProgrammingLogin/Aimodel.js');
-require('dotenv').config();
+const cors = require('cors');
 
+
+// global middleware
 app.use(express.json());
+app.use(cors());
 
+
+// basics routes
 app.get('/', async (req, res) => {
     try {
         const prompt = req.query.question;
