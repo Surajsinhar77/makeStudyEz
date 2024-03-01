@@ -8,13 +8,15 @@ interface checktyping{
 
 const Footer = ({ inputMessage, setInputMessage, handleSendMessage } : checktyping) => {
     return (
-        <Flex w="100%" mt="5">
+        <Flex w="100%" mt={5} padding={2} className="flex items-center border">
             <Input
+
                 placeholder="Type Something..."
-                border="none"
+                border={"black"}
                 borderRadius="none"
+                color={"black"}
                 _focus={{
-                    border: "1px solid black",
+                    border: "0.5px solid black",
                 }}
                 onKeyPress={(e) => {
                     if (e.key === "Enter") {
