@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
-import { useState } from "react";
-// import Divider from "../Components/Divider";
-import Footer from "./Footer";
+import React, { useState } from "react";
+// import Divider from "";
+import Footer from './Footer';
 import Header from "./Header";
 import Messages from "./Message";
 
@@ -49,4 +49,3 @@ const Chat = () => {
 };
 
 export default Chat;
-
